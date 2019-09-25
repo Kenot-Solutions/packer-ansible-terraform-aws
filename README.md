@@ -68,7 +68,7 @@ This will take about a minute
 ------------
 
 
-******************* Create Release 1.1.0 
+Create Release 1.1.0 
 
 ### Powered by Beta Kuresel [Saglayici](http://www.saglayici.com/en).
 
