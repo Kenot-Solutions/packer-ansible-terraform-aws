@@ -4,12 +4,13 @@
 
 This project combines AWS, Ansible, Packer, and Terraform to show how you can
 automagically script and deploy a server with no manual configuration. In case
-you're unfamiliar with these 3 tools:
+you're unfamiliar with these 4 tools:
 
 * [Ansible](https://www.ansible.com/) - Automates server configuration
 * [Packer](https://www.packer.io/) - Builds images of a configured server, but
 doesn't actually deploy it
 * [Terraform](https://www.terraform.io/) - Handles deploying an actual server
+* [Docker](https://www.docker.com) -  A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application
 
 ## Overview
 
