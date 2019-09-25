@@ -24,14 +24,14 @@ This project creates a AWS VPC and create an instance from the golden AMI
 
 ------------
  #### - Set the variables in the .env file. At a minimum, this includes:
--  aws_access_key=
--  aws_secret_key=
+-  aws_access_key_id
+-  aws_secret_key_id
 
 ------------
 
 #### Set the variables in the .envaws file. At a minimum, this includes:
--  aws_access_key=
--  aws_secret_key=
+-  aws_access_key_id
+-  aws_secret_key_id
 
 ------------
 
