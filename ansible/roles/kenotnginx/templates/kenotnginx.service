@@ -1,0 +1,16 @@
+[Unit]
+Description=kenot nginx contanier
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStartPre=-/usr/bin/docker stop kenotnginx
+ExecStartPre=-/usr/bin/docker rm kenotnginx
+ExecStartPre=/usr/bin/docker pull nginx
+#ExecStart=/usr/bin/docker run --rm --name kenotnginx  -p 8001:80 -v /etc/kenot/nginx/nginx.conf:/etc/nginx/nginx.conf:ro nginx 
+ExecStart=/usr/bin/docker run --rm --name kenotnginx  -p 8001:80 -v /etc/kenot/nginx/nginx.conf:/etc/nginx/nginx.conf:ro -v /etc/kenot/html:/usr/share/nginx/html nginx
+
+[Install]
+WantedBy=multi-user.target

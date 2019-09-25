@@ -1,0 +1,19 @@
+---
+- name: Add EPEL repository
+  yum:
+    name: epel-release
+    state: present
+
+- name: Update all packages
+  yum:
+    name: "*"
+    state: latest
+
+- name: Install basic packages
+  yum:
+    name: ['epel-release', 'vim', 'bash-completion', 'htop', 'tmux', 'screen', 'telnet', 'tree', 'wget', 'curl', 'git']
+    state: present
+
+- name: Disable SELinux
+  selinux:
+    state: disabled

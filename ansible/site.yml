@@ -1,0 +1,12 @@
+---
+- name: Install requires basic tools, Docker, Nginx, Kenot Docker with services, and projects
+  hosts: all
+  become: yes
+  become_method: sudo
+
+  roles:
+    - basic
+    - docker
+    - kenotnginx
+    - webproject
+    - nginx

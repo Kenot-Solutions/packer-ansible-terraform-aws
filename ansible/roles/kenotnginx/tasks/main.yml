@@ -1,0 +1,31 @@
+---
+- name: pull an image
+  docker_image:
+    name: nginx
+    source: pull
+
+- name: register a docker-nginx service
+  template:
+    src: templates/kenotnginx.service
+    dest: /etc/systemd/system/kenotnginx.service
+
+- name: create kenot directory if they don't exit
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+     - /etc/kenot
+     - /etc/kenot/nginx
+     - /etc/kenot/html
+
+- name: Install system nginx config
+  template:
+    src: templates/nginx.conf
+    dest: /etc/kenot/nginx/nginx.conf
+
+- name: enable and start  kenotnginx service
+  systemd:
+    state: started
+    enabled: yes
+    name: kenotnginx
+    daemon_reload: yes
