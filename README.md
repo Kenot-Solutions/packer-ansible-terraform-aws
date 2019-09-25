@@ -1,8 +1,8 @@
 ## Kenot Solutions by Tolgay Gul
-#### Ansible, Packer, and Terraform Demo on AWS
+#### Ansible, Packer, Docker and Terraform Demo on AWS
 
 
-This project combines AWS, Ansible, Packer, and Terraform to show how you can
+This project combines AWS, Ansible, Packer, Docker and Terraform to show how you can
 automagically script and deploy a server with no manual configuration. In case
 you're unfamiliar with these 4 tools:
 
